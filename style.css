@@ -1,127 +1,15 @@
+/*===============================
+  1. RESET & BASE
+================================*/
 body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem;
-    }
-#hamovil  {
-      display: flex;
-      height: 30px;
-    }
-#mainHeader {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: transparent;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-/* Cuando se hace scroll, cambia el fondo */
-#mainHeader.scrolled {
-  background-color: rgba(0, 0, 0, 0.8); /* o el color que prefieras */
-}
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin: 4px 0;
-    }
-
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 250px;
-      height: 100%;
-      background-color: #444;
-      padding: 2rem 1rem;
-      transition: right 0.3s ease;
-    }
-
-    .mobile-nav a {
-      margin: 1rem 0;
-      color: white;
-    }
-
-    .mobile-nav.open {
-      right: 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      .mobile-nav {
-        display: flex;
-      }
-    }
-    .logo {
-        display: flex;
-        height: 40px;
-      }
-
-
-    .foto1 {   
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;     /* hace que la imagen se recorte y llene el contenedor */
-      object-position: center;
-      }
-/*
-    Formulario contacto*/
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-.form-container {
-  background-color: #fff;
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+body.contact {
+  background-color: black;
 }
 
 h2 {
@@ -161,4 +49,131 @@ button:hover {
   text-align: center;
   margin-top: 15px;
   color: #28a745;
+}
+
+
+/*===============================
+  2. HEADER & NAV
+================================*/
+header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+#mainHeader.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+  display: flex;
+  height: 40px;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+
+/*===============================
+  3. HAMBURGER MENU & MOBILE NAV
+================================*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+#hamovil {
+  display: flex;
+  height: 30px;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #444;
+  padding: 2rem 1rem;
+  transition: right 0.3s ease;
+}
+
+.mobile-nav a {
+  margin: 1rem 0;
+  color: white;
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+
+/*===============================
+  4. FORMULARIO DE CONTACTO
+================================*/
+.form-container {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 100px auto; /* para evitar que quede detrás del header */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*===============================
+  5. IMAGEN PRINCIPAL
+================================*/
+.foto1 {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/*===============================
+  6. RESPONSIVE DESIGN
+================================*/
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
 }
